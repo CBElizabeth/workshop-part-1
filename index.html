@@ -1,140 +1,228 @@
 <!DOCTYPE html>
 <html>
-		<head>
-				<title>HTML/CSS Worksheet</title>
-				<!-- Google Fonts -->
-				<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Andika" rel="stylesheet">
-				<!-- Boilerplate CSS Files -->
-				<link rel="stylesheet" type="text/css" href="./grid.css">
-				<link rel="stylesheet" type="text/css" href="./boilerplate.css">
-				<!-- Main Styles (this is the one you're probably looking for) -->
-				<link rel="stylesheet" type="text/css" href="./style.css">
-		</head>
+	<head>
+			<title>HTML/CSS Worksheet</title>
+			<!-- Google Fonts -->
+			<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Andika" rel="stylesheet">
+			<!-- Boilerplate CSS Files -->
+			<link rel="stylesheet" type="text/css" href="./grid.css">
+			<link rel="stylesheet" type="text/css" href="./boilerplate.css">
+			<!-- Main Styles (this is the one you're probably looking for) -->
+			<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
 
-		<body class="grid solid-background">
-			<div class="overlay-alt"></div>
+	<body class="grid solid-background">
+		<div class="overlay-alt"></div>
 
-			<main class="grid__col grid__col--5-of-6 grid__col--centered">
-				<h1 class="centered-text">HTML &amp; CSS Worksheet</h1>
+		<main class="grid__col grid__col--5-of-6 grid__col--centered">
+			<h1 class="centered-text">HTML &amp; CSS Worksheet</h1>
 
-				<h2>Divs and Spans</h2>
-				<section>
-					<p>describe divs and spans ugh</p>
-					<!-- Do some sort of exercise that demonstrates block vs inline, relative/absolute, padding/margin -->
-					<!-- construct a grid of 9 boxes, have them change proportions (no change to columns, just rows) then do the same thing for columns and rows -->
-				</section>
+			<h2>Basic CSS Element Positioning</h2>
+			<section>
+				<div class="grid__col grid__col--2-of-6">
+					<p>Position is one of the trickiest things to understand in web design, and we're largely going to be using a grid system to handle positioning our elements. Because of that, we're going to keep this exercise quick and dirty.</p>
+					<article>
+						<h3>Basic Properties</h3>
+						<ul>
+							<li>position: static/relative/absolute/fixed</li>
+							<li>display: block/inline</li>
+							<li>width/height: value in x units</li>
+							<li>top/right/bottom/left: value in x units</li>
+						</ul>
+					</article>	
+					<article>
+						<h3>Understanding CSS Units</h3>
+						<ul>
+							<li>%: percentage of parent container</li>
+					        <li>px: simple measurement of pixels; 1px = 1 pixel</li>
+					        <li>vw: viewport width; 1vw = 1% of the width of the viewport</li>
+					        <li>vh: viewport height; 1vh = 1% of the height of the viewport</li>
+					        <li>vmin: viewport minimum; 1vmin = 1% of the viewport's smaller dimension (width or height)</li>
+					        <li>vmax: viewport maximum; 1vmax = 1% of the viewport's larger dimension (width or height)</li>
+						</ul>
+					</article>				
+				</div>
+				<div id="position-workspace" class="grid__col grid__col--3-of-6">
+					<div id="static-div"><p>static div</p></div>
+					<div id="relative-div"><p>relative div</p></div>
+					<div id="absolute-div"><p>(not) absolute div</p></div>
+					<div id="fixed-div"><p>(not) fixed div</p></div>
+				</div>
+			</section>
 
-				<h2>Anatomy of a Layout</h2>
-				<section>
-					<!-- include a small example using divs with text labels on each box, then direct them to click on a link and open up the text file for a page with an existing (simple) layout to modify -->
-				</section>
+			<h2>Text, Lists, Spans, Etc.</h2>
+			<section class="grid__col grid__col--4-of-5">
+				<p></p>
+				<p><em>Task:</em> Complete each item in the list. We'll do some together, some apart.</p>
+				<p><em>Additional Resource:</em> <a href="http://www.color-hex.com/popular-colors.php" target="_blank">Hex Color Codes</a></p>
+				<ol>
+					<li>Make every appearance of the word strong in this sentence.. strong!</li>
+					<li>Add emphasis to every instance of the word emphasis in this sentence.</li>
+					<li>List a few strong and/or sarcastic words and label them appropriately:</li>
+						<ul>
+							<li>Here</li>
+							<li>And here</li>
+							<li>Here too</li>
+						</ul>
+					<li>Try wrapping this sentence in a marquee tag because in the 90s, marquees were everything.</li>
+					<li>Use a span and the class "fav-color" to change the color of this sentence. </li>
+					<li>Use a span and the class "bg-color" to change the background color of this sentence.</li>
+					<li>Nest another ordered list below this item. Pick three things and rank them:</li>
+					<li>Use a span and add a new class named "change-size" to change the font size of this sentence to 1.1em, 1.3em, 1.5em, etc. Try a few!</li>
+					<li>Use a span and add a new class named "caps" with the "text-transform" property to modify some words in this sentence. Try setting it to capitalize, uppercase, and lowercase.</li>
+				</ol>
+			</section>
+			<section class="grid__col grid__col--1-of-5 callout-box">
+				<h1>h1: A main title</h1>
+				<h2>h2: A top level heading</h2>
+				<h3>h3: A subheading</h3>
+				<h4>h4: A sub-subheading</h4>
+				<p>p: A paragraph</p>
+				<p><em>em: Meaning</em></p>
+				<p><strong>strong: Importance</strong></p>
+			</section>
 
-				<h2>Text Elements</h2>
-				<section class="grid__col grid__col--4-of-5">
-					<ol>
-						<li>Make every instance of the word strong in this sentence strong.</li>
-						<li>Add emphasis to every instance of the word emphasis in this sentence.</li>
-						<li>List a few strong and/or sarcastic words and label them appropriately:</li>
-							<ul>
-								<li>Here</li>
-								<li>And here</li>
-								<li>Here too</li>
-							</ul>
-						<li>Try wrapping this sentence in a marquee tag because in the 90s, marquees were everything.</li>
-						<li>*********</li>
-						<li>*********</li>
-						<li>Nest another ordered list below this item. Pick three things and rank them:</li>
-						<li>*********</li>
-						<li>*********</li>
-						<li>*********</li>
-					</ol>
-				</section>
-				<section class="grid__col grid__col--1-of-5 callout-box">
-					<h1>h1: A main title</h1>
-					<h2>h2: A top level heading</h2>
-					<h3>h3: A subheading</h3>
-					<h4>h4: A sub-subheading</h4>
-					<p>p: A paragraph</p>
-					<p><em>em: Meaning</em></p>
-					<p><strong>strong: Importance</strong></p>
-				</section>
+			<h2>Anatomy of a Layout</h2>
+			<section>
+				<div class="grid__col grid__col--2-of-5">
+					<p>Here's a simple "sketch" of a page layout. It includes a pseudo header, navigation bar, sidebar (or aside), body with sections and articles, and footer.</p>
+					<p>We're going to recreate this layout together in the <a href="./example-layout.html" target="_blank">example layout</a> page. Go ahead and open up the example-layout.html and example-layout.css files in Sublime, then we'll walk through this together.</p>
+					<p>Most of the elements are already on the page, but we will need to create the sections (and article) that appear in the box on the right.</p>
+					<p>We will need to add ids and classes to the elements that exist. We'll be using a combination of classes we create and classes from the <a href="https://daneden.github.io/Toast/" target="_blank">TOAST grid system</a> to style the page.</p>
+					<p>This grid system uses the class "grid__col" to determine that something is a column, then classes in the format "grid__col--1-of-6" to determine the column's width relative to its parent element. There are other classes, like "grid__col--centered" and "grid__col--push-3-of-6" that give us additional positioning options- we'll use those too!</p>
+				</div>
+				<div id="layout-example" class="grid__col grid__col--2-of-5">
+				<!-- include a small example using divs with text labels on each box, then direct them to click on a link and open up the text file for a page with an existing (simple) layout to modify -->
+					<div id="nav" class="grid__col grid__col--6-of-6">
+						<p>nav</p>
+					</div>
+					<div id="header" class="grid__col grid__col--6-of-6">
+						<p>header</p>
+					</div>
+					<div id="aside" class="grid__col grid__col--1-of-6">
+						<p>aside</p>
+					</div>
+					<div id="main" class="grid__col grid__col--5-of-6">
+						<p>main</p>
+						<section id="first-section" class="grid__col grid__col--5-of-6 grid__col--centered">
+							first section
+						</section>
+						<section id="second-section" class="grid__col grid__col--5-of-6 grid__col--centered">
+							second section
+							<article id="article" class="grid__col grid__col--2-of-6 grid__col--push-3-of-6">
+								article
+							</article>
+						</section>
+					</div>
+					<div id="footer" class="grid__col grid__col--6-of-6">
+						<p>footer</p>
+					</div>
+				</div>
+			</section>
 
-				<h2>A Lesson In Tables</h2>
-				<section>
-					<p>Tables used to be the foundation of most page layouts, but they have fallen out of favor in recent.. decades. I've only used them a few times, but they are useful for demonstrating how elements are nested.</p>
-					<p><em>Task:</em> Add an additional column and an additional row to this table.</p>
-					<p><em>Bonus:</em> See if you can figure out how to change the font of the header row to 'Amatic SC'.</p>
-					<p><em>Additional Resource:</em> <a href="https://css-tricks.com/complete-guide-table-element/">A Complete Guide to the Table Element</a></p>
-					<article class="grid__col grid__col--3-of-5 grid__col--centered">
-						<h3>Percentage of US Jobs Held by Women in Various Computing Occupations, 2015</h3>
-						<table>
-							<thead>
-								<tr>
-									<th>Job Title</th>
-									<th>Black Women</th>
-									<th>Hispanic Women</th>
-									<th>Asian Women</th>
-									<th>White Women</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Computer Programmers</td>
-									<td>2%</td>
-									<td>1%</td>
-									<td>5%</td>
-									<td>13%</td>
-								</tr>
-								<tr>
-									<td>Software Developers</td>
-									<td>1%</td>
-									<td>1%</td>
-									<td>7%</td>
-									<td>9%</td>
-								</tr>
-								<tr>
-									<td>Web Developers</td>
-									<td>4%</td>
-									<td>1%</td>
-									<td>4%</td>
-									<td>25%</td>
-								</tr>
-								<tr>
-									<td>Database Admins</td>
-									<td>2%</td>
-									<td>1%</td>
-									<td>4%</td>
-									<td>29%</td>
-								</tr>
-							</tbody>
-						</table>
-						<h4 class="right-text"><a href="https://www.ncwit.org/sites/default/files/resources/womenintech_facts_fullreport_05132016.pdf" target="_blank">NCWIT Women In Tech Facts, Page 8, 2016</a></h4>
-					</article>
-				</section>
+			<h2>A Lesson In Tables</h2>
+			<section>
+				<p>Tables used to be the foundation of most page layouts, but they have fallen out of favor in recent.. decades. I've only used them a few times, but they are useful for demonstrating how elements are nested.</p>
+				<p><em>Task:</em> Add an additional column and an additional row to this table.</p>
+				<p><em>Bonus:</em> See if you can figure out how to change the font of the header row to 'Amatic SC'.</p>
+				<p><em>Additional Resource:</em> <a href="https://css-tricks.com/complete-guide-table-element/" target="_blank">A Complete Guide to the Table Element</a></p>
+				<article class="grid__col grid__col--3-of-5 grid__col--centered">
+					<h3>Percentage of US Jobs Held by Women in Various Computing Occupations, 2015</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Job Title</th>
+								<th>Black Women</th>
+								<th>Hispanic Women</th>
+								<th>Asian Women</th>
+								<th>White Women</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Computer Programmers</td>
+								<td>2%</td>
+								<td>1%</td>
+								<td>5%</td>
+								<td>13%</td>
+							</tr>
+							<tr>
+								<td>Software Developers</td>
+								<td>1%</td>
+								<td>1%</td>
+								<td>7%</td>
+								<td>9%</td>
+							</tr>
+							<tr>
+								<td>Web Developers</td>
+								<td>4%</td>
+								<td>1%</td>
+								<td>4%</td>
+								<td>25%</td>
+							</tr>
+							<tr>
+								<td>Database Admins</td>
+								<td>2%</td>
+								<td>1%</td>
+								<td>4%</td>
+								<td>29%</td>
+							</tr>
+						</tbody>
+					</table>
+					<h4 class="right-text"><a href="https://www.ncwit.org/sites/default/files/resources/womenintech_facts_fullreport_05132016.pdf" target="_blank">NCWIT Women In Tech Facts, Page 8, 2016</a></h4>
+				</article>
+			</section>
 
-				<h2>Image Effects!</h2>
-				<section>
-					<!-- border, box shadow, circle images, have them replace existing images with theirs (or an example image, include one) -->
-				</section>
+			<h2>Image Effects!</h2>
+			<section>
+				<p>Here are a couple simple image styles- we'll likely use one or both next week when we build your portfolio page.</p>
+				<p>For context, right click on one of the left images and open it in a new tab. It should be huge compared to the image you see on the page. That image (otherwise unstyled) has been set to a max height and a max width of 35vmin, or the smaller value of your page's height and width. If you resize this page to make it very narrow or very wide, you should see the image change size but remain square.</p>
+				<p><em>Additional Resource:</em> <a href="https://medium.com/@steph.w/8ad4dbe119ab#.30zg0g9l7" target="_blank">6 simple CSS tricks for images</a></p>
+				<h3>Turn a Square Image Into a Circle</h3>
+    			<div class="grid__col grid__col--2-of-5">
+    				<p>In order to use this style, you will need to use a square image. You can crop an existing image online using <a href="http://croppola.com/" target="_blank">Croppola</a>, then add it to the images folder. If you don't have any pictures handy, you can use the image located at './images/pupper.jpg' instead.</p>
+    				<p><em>Task:</em> Replace both photos by changing the source in the img tags below to your image (or the puppy).</p>
+    				<p><em>Bonus:</em> See what happens when you change the image to one that isn't square. Alternatively, try changing the border-radius and shape-outside values to see how it changes the effect on the image.</p>
+    			</div>
+		        <article class="grid__col grid__col--3-of-5">
+		          <img src="./images/love_sign.jpg" class="before-image">
+		          <img src="./images/love_sign.jpg" class="circular-square">
+		        </article>
 
-				<footer>
-					<span class="grid__col grid__col--3-of-3">
-						<p><em>Have questions? Contact Elizabeth!</em></p>
-					</span>
-					<span class="grid__col grid__col--1-of-4">
-						<a href="https://twitter.com/TooxCB" target="_blank">Twitter</a>
-					</span>
-					<span class="grid__col grid__col--1-of-4">
-						<a href="https://github.com/CBElizabeth" target="_blank">Github</a>
-					</span>
-					<span class="grid__col grid__col--1-of-4">
-						<a href="https://www.linkedin.com/in/cbelizabeth" target="_blank">LinkedIn</a>
-					</span>
-					<span class="grid__col grid__col--1-of-4">
-						<a href="mailto:e.r.blackburn@gmail.com" target="_blank">Email</a>
-					</span>
-				</footer>
-			</main>
+    			<h3>Soften The Corners + Border + Box Shadow</h3>
+    			<div class="grid__col grid__col--2-of-5">
+    				<p>This style works with any image dimensions.</p>
+    				<p><em>Task:</em> Replace both photos by changing the source in the img tags below to your image (or the puppy).</p>
+    				<p><em>Bonus:</em> Play around with the border width and box shadow values to see what happens!</p>
+    			</div>
+		        <article class="grid__col grid__col--3-of-5">
+		          <img src="./images/love_sign.jpg" class="before-image">
+		          <img src="./images/love_sign.jpg" class="styled-image">
+		        </article>
+			</section>
 
-		</body>
+			<h2>Wrap Up!</h2>
+			<section>
+				<p>Hopefully you feel more comfortable with and less mystified by HTML and CSS. This week we established the basics- or most of them, at least. We skipped over some aspects of web design because you're already drinking from the firehose as it is and after all, we only have 2 hours.</p>
+				<p>Next week we're going to use a simple layout (which I am still fiddling with, because I'm always fiddling) to create your portfolio page. You'll change the layout, background, color palette, content, and images to make it your own.</p>
+				<p>If you have time this week, try to figure out what you'd like to say about yourself, if you'd like to include your resume (a good case for antiquated table technology), what pictures you'd like to use, and maybe a color palette of 4 or 5 colors. Jotting all of that down, maybe sketching it out, will give you a good foundation for next week, and will give you extra time to fiddle.</p>
+				<p><strong>See you on Tuesday, and email me if you have any questions between now and then!</strong></p>
+			</section>
+			<footer class="centered-text">
+				<span class="grid__col grid__col--1-of-4">
+					<a href="https://twitter.com/TooxCB" target="_blank">Twitter</a>
+				</span>
+				<span class="grid__col grid__col--1-of-4">
+					<a href="https://github.com/CBElizabeth" target="_blank">Github</a>
+				</span>
+				<span class="grid__col grid__col--1-of-4">
+					<a href="https://www.linkedin.com/in/cbelizabeth" target="_blank">LinkedIn</a>
+				</span>
+				<span class="grid__col grid__col--1-of-4">
+					<a href="mailto:e.r.blackburn@gmail.com" target="_blank">Email</a>
+				</span>
+			</footer>
+		</main>
+
+	</body>
 </html>

@@ -1,3 +1,6 @@
+/*
+Styles for this layout!
+*/
 html {
     color: #431C5D;
 }
@@ -34,8 +37,110 @@ main {
     overflow: scroll;
 }
 footer {
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-bottom: 2vh;
+}
+
+/*
+Basic CSS Element Positioning
+*/
+#position-workspace {
+    padding: 0px;
+    height: 60vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #3B3A36;
+    margin: 2vh 2vw 2vh 2vw;
+    background-color: #F8B195;
+    display: inline-block;
+}
+#static-div {
+    background-color: #6C5B7B;
+    width: 120px;
+    height: 120px;
+}
+#relative-div {
+    background-color: #C06C84;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    
+}
+#absolute-div {
+    background-color: #F67280;
+    /*position: absolute;*/
+    width: 120px;
+    height: 120px;
+    float: right;
+}
+#fixed-div {
+    background-color: #355C7D;
+    /*position: fixed;*/
+    width: 120px;
+    height: 120px;
+    float: right;
+}
+
+/*
+Text, Lists, Spans, Etc.
+*/
+.fav-color {
+    color: #FFFFFF;
+}
+.bg-color {
+    background-color: #000000;
+}
+
+/*
+Anatomy Of A Layout
+Here are the example styles. We'll need to translate some of this over to example-layout.css.
+*/
+#layout-example {
+    padding: 0px;
+    height: 60vh;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #3B3A36;
+    margin: 2vh 2vw 2vh 2vw;
+}
+
+#layout-example > div {
+    padding: 0px;
+    margin: 0px;
+}
+#nav {
+    background-color: #6C5B7B;
+    height: 7%;
+}
+#header {
+    background-color: #C06C84;
+    height: 20%;
+}
+#aside {
+    background-color: #F8B195;
+    height: 65%;
+}
+#main {
+    background-color: #F67280;
+    height: 65%;
+    float: right;
+}
+#first-section {
+    background-color: #6C5B7B;
+    height: 25%;
+    margin-bottom: 5%;
+}
+#second-section {
+    background-color: #6C5B7B;
+    height: 50%;
+}
+#article {
+    background-color: #F8B195;
+    height: 75%;
+}
+#footer {
+    background-color: #355C7D;
+    height: 8%;
 }
 
 /*
@@ -49,7 +154,6 @@ table {
     color: #B3C2BF;
     background-color: #3B3A36;
     border-radius: 5px;
-    /*margin: 0 auto;*/
 }
 th,
 td {
@@ -70,6 +174,36 @@ tr > th:not(:last-child) {
     border-right: 2px dotted #C0DFD9;
 }
 
+/* 
+Image Effects 
+This circular image style requires square image - crop online at http://croppola.com/
+*/
+.circular-square {
+    border-radius: 50%;
+    height: 35vmin;
+    shape-outside: circle(50%);
+    width: 35vmin;
+}
+.styled-image {
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    border-color: #000000;
+    border-radius: 1%;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    height: 35vmin;
+    width: 35vmin;
+}
+.before-image {
+    width: 35vmin;
+    height: 35vmin;
+}
+
+
+/*
+Simple styles for text alignment etc.
+*/
 .centered-text {
     text-align: center;
 }
@@ -90,7 +224,7 @@ tr > th:not(:last-child) {
     z-index: -2;
 }
 [class*='-background'] > .overlay-alt {
-    background-image: url(./cubes.png);
+    background-image: url(./images/cubes.png);
     background-repeat: repeat;
     height: 105vh;
     left: -5vw;
@@ -99,13 +233,4 @@ tr > th:not(:last-child) {
     top: -5vh;
     width: 105vw;
     z-index: -1;
-}
-
-.solid-sidebar-right {
-	background-color: #C0DFD9;
-	position: fixed;
-    z-index: 3;
-    height: 100vh;
-    right: 0px;
-    width: 8vw;
 }
