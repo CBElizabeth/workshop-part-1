@@ -1,0 +1,117 @@
+/*
+These styles set a base text size of 100% browser default (typically 16px),
+set the line-height to 1.5, and Arial or sans-serif as the font.
+*/
+html {   
+	font: 100%/1.5 Arial, sans-serif;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0 0 1em;
+}
+
+/*
+This block adds automatic hyphenation to paragraphs.
+*/
+p {
+	word-break: break-all;
+	/* Non standard for webkit */
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+/*
+This style displays code blocks in a way that is standardized.
+*/
+code,
+pre {   
+	font-family: monospace, serif;
+    font-size: 1em; 
+}
+
+/* 
+This style standardizes font weight across browsers.
+*/
+body,
+input,
+button {
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 
+This style sets all elements as border box rather than content box.
+If you're curious about the difference, check out:
+https://css-tricks.com/box-sizing/ 
+*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic; 
+}
+
+/* Comment out style below to restore visible scrollbars! */
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
+/* 
+The styles below set the header tags to standard sizes using the unit 'em'. 
+1em = 16px, standard font size for most screens. 
+*/
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 0.83em;
+}
+h6 {
+	font-size: 0.75em;
+}
+
+/*
+This block helps make your pages easily printable!
+*/
+@media print {
+	* { 
+		background: transparent !important;
+		color: #000 !important; /* Black prints faster: h5bp.com/s */
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	p,
+	h2,
+	h3 { 
+		orphans: 3; /* http://css-tricks.com/almanac/properties/o/orphans/ */
+    	widows: 3;  /* http://css-tricks.com/almanac/properties/w/widows/ */
+    }
+    h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
