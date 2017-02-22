@@ -85,10 +85,11 @@ Basic CSS Element Positioning
 Text, Lists, Spans, Etc.
 */
 .fav-color {
-    color: #FFFFFF;
+    color: #ff4040;
+    background-color: #7fffd4;
 }
 .bg-color {
-    background-color: #000000;
+    background-color: #ff4040;
 }
 
 /*

@@ -1,27 +1,47 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+
+body > * {
+    padding: 0px;
+    margin: 0px;
+}
+
 nav {
     background-color: #355C7D;
+    height: 7%;
 }
 header {
     background-color: #C06C84;
+    height: 20%;
 }
 aside {
     background-color: #F8B195;
+    height: 65%;
 }
 main {
     background-color: #F67280;
-    width: 100%;
-    height: 100%;
+    height: 65%;
+    float: right;
 }
 footer {
     background-color: #6C5B7B;
+    height: 8%;
 }
 
 #first-section {
     background-color: #355C7D;
+    height: 25%;
+    margin-bottom: 5%
 }
 #second-section {
     background-color: #355C7D;
+    height: 50%;
 }
 #article {
     background-color: #F8B195;
+    height: 75%;
 }

@@ -10,11 +10,19 @@
 				<!-- Main Styles (this is the one you're probably looking for) -->
 				<link rel="stylesheet" type="text/css" href="./example-layout.css">
 		</head>
-		<body>
-			<nav></nav>
-			<header></header>
-			<aside></aside>
-			<main></main>
-			<footer></footer>
+		<body class="grid">
+			<nav class="grid__col grid__col--6-of-6"><p>nav</p></nav>
+			<header class="grid__col grid__col--6-of-6"><p>header</p></header>
+			<aside class="grid__col grid__col--1-of-6"><p>aside</p></aside>
+			<main class="grid__col grid__col--5-of-6 grid__col--centered">
+				<section id="first-section" class="grid__col grid__col--5-of-6 grid__col--centered"><p>first section</p></section>
+				<section id="second-section" class="grid__col grid__col--5-of-6 grid__col--centered">
+					<p>second section</p>
+					<article id="article" class="grid__col grid__col--2-of-6 grid__col--push-3-of-6">
+						<p>article</p>
+					</article>
+				</section>
+			</main>
+			<footer class="grid__col grid__col--6-of-6"></footer>
 		</body>
 </html>
